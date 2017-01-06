@@ -1,0 +1,21 @@
+:host {
+  flex-basis: 360px;
+  flex-grow: 0;
+  flex-shrink: 1;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  align-content: flex-start;
+
+  background-color: #424242;
+
+  box-shadow: 3px 3px 5px 6px #222222;
+  margin-right: 30px;
+
+}
+
+:host(.small) {
+  flex-basis: 75px;
+}
