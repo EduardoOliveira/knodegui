@@ -9,7 +9,7 @@ import {MenuItemsService} from "./services/menu-items.service";
     styleUrls: ['./side-menu.component.scss']
 })
 export class SideMenuComponent implements OnInit {
-    @HostBinding('class.small') small: boolean = false;
+    @HostBinding('class.small') small: boolean = true;
 
     private toggleMenu: ToggleMenuItem;
     private menuItems: MenuItemModel[] = [];
@@ -17,7 +17,6 @@ export class SideMenuComponent implements OnInit {
 
     public constructor(menuItemsService: MenuItemsService) {
         this.toggleMenu = new ToggleMenuItem(this);
-        menuItemsService.addItem(this.toggleMenu);
         menuItemsService.addItem(this.toggleMenu);
 
         this.menuItems = menuItemsService.getItems().sort((n1, n2) => n2.getPriority() - n1.getPriority());

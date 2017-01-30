@@ -10,23 +10,51 @@
   align-items: center;
   justify-content: center;
 
+  overflow: hidden;
+
   &:before {
-    content:'';
-    float:left;
-    padding-top:100%;
+    content: '';
+    float: left;
+    padding-top: 100%;
   }
 
   &:hover {
     color: #424242;
     background: #E53935;
   }
+  .wrapper {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 15px;
+    min-width: 0;
 
-  div.text{
-    font-weight: bold;
+    i {
+      font-size: 8rem;
+    }
+
+    div.text {
+      font-weight: bold;
+      width: 100%;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 }
 
 :host-context(.small) {
   flex: 0 0 100%;
   height: auto;
+  overflow: hidden;
+
+  .wrapper {
+    i {
+      font-size: 3rem;
+    }
+  }
 }

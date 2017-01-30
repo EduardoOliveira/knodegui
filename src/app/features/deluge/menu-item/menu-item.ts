@@ -1,29 +1,27 @@
 import {MenuItemModel} from "../../../core/core-components/side-menu/menu-item/model/menu-item-model";
 import {Router} from "@angular/router";
-
 export class MenuItem implements MenuItemModel {
-    private router: Router;
 
-    constructor(router: Router) {
-        this.router = router;
-    }
+    constructor(private router:Router){
 
-    getPriority(): number {
-        return 0;
     }
 
     onClick($event: Event): void {
-        this.router.navigate(['/dashboard']);
     }
 
     onHold($event: Event): void {
     }
 
     getName(): string {
-        return "Dashboard";
+        return undefined;
     }
 
-    getIcon(): {type: string, name: string} {
-        return {type: 'fa', name: 'fa-tachometer'};
+    getIcon(): {type: string; name: string} {
+        return {type: 'fa', name: 'fa-cloud-download'};
     }
+
+    getPriority(): number {
+        return undefined;
+    }
+
 }

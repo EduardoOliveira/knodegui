@@ -6,6 +6,7 @@ import {AppComponent} from './app.component';
 import {CoreModule} from "./core/core.module";
 import {DashboardModule} from "./features/dashboard/dashboard.module";
 import {AppRoutingModule} from "./app-routing.module";
+import {DelugeModule} from "./features/deluge/deluge.module";
 
 @NgModule({
     declarations: [
@@ -16,6 +17,7 @@ import {AppRoutingModule} from "./app-routing.module";
         FormsModule,
         CoreModule,
         DashboardModule,
+        DelugeModule,
         AppRoutingModule
     ],
     providers: [],

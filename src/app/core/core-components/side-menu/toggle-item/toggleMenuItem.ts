@@ -21,8 +21,14 @@ export class ToggleMenuItem implements MenuItemModel {
         return "Toggle";
     }
 
-    public getIcon(): string {
-        return "icon";
+    public getIcon(): {type: string; name: string} {
+        let clazz = '';
+        if (this.sideMenu.small) {
+            clazz = 'fa-expand';
+        } else {
+            clazz = 'fa-compress';
+        }
+        return {type: 'fa', name: clazz};
     }
 
     public getPriority(): number {
